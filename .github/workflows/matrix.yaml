@@ -1,4 +1,4 @@
-name: Matrx Demo
+name: Matrix Demo
 on: push
 jobs:
   build:
@@ -6,7 +6,7 @@ jobs:
       matrix:
         node-version: [12, 16 , 14,]
         operation-system: [ ubuntu-latest, windows-latest ]
-    rus-on: ${{ matrix.operating-system }}
+    runs-on: ${{ matrix.operating-system }}
     steps:
       - name: Get code
         uses: actions/checkout@v3
